@@ -26,5 +26,10 @@ Dev Environment Setup
     Converting the project into a Yew web application
         Update Cargo.toml, adding yew as a dependency. The latest version can be checked at:
             https://crates.io/crates/yew/versions
+        
+        Change the main.rs file with yew's loader, and add an index.html file to the root of the application (yew-app/index.html)
+
+        Run the dev server using
+            trunk serve
 
 Project Setup
