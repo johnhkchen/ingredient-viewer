@@ -1,0 +1,30 @@
+Setup Instructions (The first!)
+
+Overview
+    This document will describe how the project was created, and server as a blueprint for containerizing the app.
+
+    This project is set up using the Yew Rust framework, so learning a bit about Yew and Rust is recommended. However, you're not expected to understand a ton about Yew and Rust to be able to understand this document.
+
+Dev Environment Setup
+    Install Rust
+        Execute the rustup-init script (https://www.rust-lang.org/tools/install)
+
+    Set brower-based WebAssembly compilation target
+        rustup target add wasm32-unknown-unknown
+
+    Install Trunk, a build tool
+        cargo install trunk
+
+    Build and run a sample app
+        cargo new yew-app
+        cd yew-app
+        cargo run
+             
+        > Running `target/debug/yew-app`
+        > Hello, world!
+    
+    Converting the project into a Yew web application
+        Update Cargo.toml, adding yew as a dependency. The latest version can be checked at:
+            https://crates.io/crates/yew/versions
+
+Project Setup
