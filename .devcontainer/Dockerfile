@@ -8,5 +8,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/rust:0-${VARIANT}
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-RUN rustup target add wasm32-unknown-unknown
-RUN cargo install trunk
+# RUN rustup target add wasm32-unknown-unknown
+# RUN cargo install trunk
+RUN pwd > workdir.txt
+RUN echo "fn main() {}" > dummy.rs
+# COPY Cargo.toml .
