@@ -1,0 +1,13 @@
+Setup Process
+
+Overview
+    This document will describe how the project was created, and provides a blueprint for containerizing the app.
+
+    This project is set up using the Yew Rust framework.
+
+Dev Environment Setup
+        Run the dev server using
+            trunk serve
+
+
+        

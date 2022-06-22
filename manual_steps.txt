@@ -1,26 +1,7 @@
-These are manual steps that we did to get the code to work from the base devcontainer definition.
-
-As such, they are good candidates for automation.
-
-Manual Steps:
-
-    cargo install trunk
-    cd /yew-app
-    trunk serve
-
-
 Desired Shortcuts:
-
-ts
-    trunk serve
 
 dcu - docker-compose up: 
 dcu test
 dcu e2e
 dcu staging
 dcu production
-
-
-Desired workflow:
-
-VS Code -> Open in Container -> ts or dcu test

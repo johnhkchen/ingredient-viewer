@@ -1,17 +1,14 @@
 use yew::prelude::*;
 
-enum Msg {
-    AddOne,
-    AddThree,
-    AddFive,
+enum Event {
+    Add(i64)
 }
-
 struct Model {
     value: i64,
 }
 
 impl Component for Model {
-    type Message = Msg;
+    type Message = Event;
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
@@ -20,20 +17,10 @@ impl Component for Model {
         }
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+    fn update(&mut self, _ctx: &Context<Self>, msg: Event) -> bool {
         match msg {
-            Msg::AddOne => {
-                self.value += 1;
-                // the value has changed so we need to
-                // re-render for it to appear on the page
-                true
-            },
-            Msg::AddThree => {
-                self.value += 3;
-                true
-            },
-            Msg::AddFive => {
-                self.value += 5;
+            Event::Add(c) => {
+                self.value += c;
                 true
             }
         }
@@ -44,9 +31,9 @@ impl Component for Model {
         let link = ctx.link();
         html! {
             <div>
-            <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
-            <button onclick={link.callback(|_| Msg::AddThree)}>{ "+3" }</button>
-            <button onclick={link.callback(|_| Msg::AddFive)}>{ "+5" }</button>
+            <button onclick={link.callback(|_| Event::Add(1))}>{ "+1" }</button>
+            <button onclick={link.callback(|_| Event::Add(3))}>{ "+3" }</button>
+            <button onclick={link.callback(|_| Event::Add(5))}>{ "+5" }</button>
                 <p>{ self.value }</p>
             </div>
         }
