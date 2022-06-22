@@ -32,4 +32,7 @@ Dev Environment Setup
         Run the dev server using
             trunk serve
 
-Project Setup
+        Build the app for release using
+            build --release.
+
+        
