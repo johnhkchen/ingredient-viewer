@@ -9,3 +9,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/rust:0-${VARIANT}
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 RUN rustup target add wasm32-unknown-unknown
+RUN cargo install trunk

@@ -4,9 +4,9 @@ As such, they are good candidates for automation.
 
 Manual Steps:
 
-    cargo install --locked --version 0.15.0 trunk
+    cargo install trunk
     cd /yew-app
-    cargo build
+    trunk serve
 
 
 Desired Shortcuts:
