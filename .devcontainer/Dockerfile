@@ -8,5 +8,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/rust:0-${VARIANT}
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 WORKDIR /yew-app
-# RUN cargo build
+
+# Install trunk - package manager
+RUN cargo install trunk
 RUN rustup target add wasm32-unknown-unknown
+# Use cargo to compile our app
+RUN cargo build
