@@ -12,6 +12,6 @@ RUN rustup target add wasm32-unknown-unknown
 
 # Install trunk - package manager
 RUN echo 'alias ts="trunk serve"' >> ~/.bashrc
-RUN cargo install --locked --version 0.15.0 trunk
+# RUN cargo install --locked --version 0.15.0 trunk
 
 # Use cargo to compile our app
