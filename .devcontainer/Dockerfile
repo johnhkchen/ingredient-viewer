@@ -10,7 +10,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/rust:0-${VARIANT}
 WORKDIR /yew-app
 
 # Install trunk - package manager
+RUN echo 'alias ts="trunk serve"' >> ~/.bashrc
 RUN cargo install trunk
+
 RUN rustup target add wasm32-unknown-unknown
 # Use cargo to compile our app
 RUN cargo build
