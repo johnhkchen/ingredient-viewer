@@ -1,0 +1,26 @@
+These are manual steps that we did to get the code to work from the base devcontainer definition.
+
+As such, they are good candidates for automation.
+
+Dependencies
+
+1. cargo install trunk
+2. WASM bindings for Yew rustup target add wasm32-unknown-unknown
+
+Cool shortcuts
+
+clean
+    Remove unimportant files?
+
+ts
+    trunk serve
+
+dcu - docker-compose up: 
+dcu test
+dcu staging
+dcu production
+
+
+Desired workflow:
+
+VS Code -> Open in Container -> ts
